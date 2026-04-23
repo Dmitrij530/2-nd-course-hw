@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+
+.header {
+    background-image: url(images/fonhead.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-stars {
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.header-star1 {
+    position: absolute;
+    top: 94px;
+    left: 63px;
+}
+
+.header-star2 {
+    position: absolute;
+    top: 69px;
+    left: 159px;
+}
+
+.header-star3 {
+    position: absolute;
+    left: 948px;
+    top: 538px;
+}
+
+.header-star4 {
+    position: absolute;
+    top: 568px;
+    left: 1013px;
+}
+
+.header-block {
+    padding-top: 196px;
+}
+
+.header-block__zag1 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 64px;
+    line-height: 100%;
+    padding-bottom: 24px;
+}
+
+.header-block__text {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 48px;
+}
+
+.header-block__black {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.header-block__link {
+    display: block;
+    border: 1px solid black;
+    max-width: 247px;
+    max-height: 66px;
+    border-radius: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 156px;
+    color: #FFFFFF;
+    background-color: #202027;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 142%;
+    text-align: center;
+}
+
+.header-block__link:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: 0.7s;
+}
+
+.header__strip {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+    background-color: #BCEC30;
+    opacity: 1;
+    border-width: 1px;
+    padding-top: 27px;
+    padding-right: 49px;
+    padding-bottom: 27px;
+    padding-left: 49px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.svg {
+    overflow: visible;
+    clip-path: none;
+}
+
+.header__text {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: 4%;
+    white-space: nowrap;
+}
+
+.information {
+    background-color: #202027;
+}
+
+.information-inform {
+    max-width: 1210px;
+}
+
+.information-block {
+    padding-top: 94px;
+}
+
+.information-block__zagolovok2 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 64px;
+    line-height: 100%;
+    color: #FFFFFF;
+    padding-bottom: 24px;
+}
+
+.information-block__text {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    padding-bottom: 72px;
+}
+
+.information-games {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 32px;
+}
+
+.information-items {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    max-width: 378px;
+    height: auto;
+    grid-column: span 3;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.information-items:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.information__link {
+    grid-column: span 3;
+    text-decoration: none;
+    z-index: 0;
+    color: #202027;
+}
+
+.information-games__star1 {
+    position: absolute;
+    right: 0px;
+    top: 877px;
+    z-index: 0;
+}
+
+.information-games__star2 {
+    position: absolute;
+    left: 25px;
+    top: 1570px;
+}
+
+.information-games__star3 {
+    position: absolute;
+    left: 40px;
+    top: 1622px;
+}
+
+.information-items__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 110.00000000000001%;
+    border-radius: 52.58px;
+    margin-left: 32px;
+    margin-top: 32px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border: 1px solid #F7F7F7;
+    background-color: #F7F7F7;
+    max-width: 76px;
+    margin-bottom: 16px;
+}
+
+.information-items__zagolovok3 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    padding-left: 32px;
+    padding-bottom: 36px;
+}
+
+.information__big {
+    height: auto;
+}
+
+.information__position {
+    transform: translateY(-33px);
+}
+
+.games {
+    background-color: #202027;
+    padding-top: 96px;
+    background-size: cover;
+}
+
+.games__star1 {
+    position: absolute;
+    top: 2313px;
+    right: 123px;
+}
+
+.games__star2 {
+    position: absolute;
+    right: 44px;
+    top: 2356px;
+}
+
+.games__star3 {
+    position: absolute;
+    right: 52px;
+    top: 5596px;
+}
+
+.games__star4 {
+    position: absolute;
+    top: 5654px;
+    right: 150px;
+}
+
+.games-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.games__zagolovok2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    color: #FFFFFF;
+    padding-bottom: 72px;
+}
+
+.games-block__play {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    max-width: 1200px;
+    height: 500px;
+    gap: 48px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.games-block__play2 {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    height: 500px;
+    gap: 48px;
+    overflow: hidden;
+}
+
+.games-block__inform {
+    padding-left: 48px;
+    padding-top: 48px;
+    width: 504px;
+    padding-right: 95px;
+}
+
+.games-block__zagolovok3 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+}
+
+.games-block__text {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 24px;
+    padding-bottom: 36px;
+}
+
+.games-block__link {
+    text-decoration: none;
+    max-width: 247px;
+    border: 1px solid black;
+    gap: 10px;
+    opacity: 1;
+    border-radius: 60px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 142%;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #202027;
+}
+
+.games-block__link:hover {
+    background-color: white;
+    color: black;
+    transition: 0.7s;
+}
+
+.otstup {
+    margin-bottom: 144px;
+}
+
+.niz {
+    background-color: #BDED35;
+}
+
+.niz-footer__text {
+    text-align: center;
+    padding-top: 61px;
+    padding-bottom: 60px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+}
