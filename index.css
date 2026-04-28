@@ -55,6 +55,18 @@ body {
     left: 1013px;
 }
 
+.header-stars__media {
+    display: none;
+}
+
+.header-stars__media2 {
+    display: none;
+}
+
+.header-stars__media3 {
+    display: none;
+}
+
 .header-block {
     padding-top: 196px;
 }
@@ -382,4 +394,208 @@ body {
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .header-stars__media {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    .header-stars__media2 {
+        display: block;
+        position: absolute;
+        top: 557px;
+        right: 86px;
+        bottom: 74px;
+        z-index: 0;
+    }
+
+    .header-stars__media3 {
+        display: block;
+        position: absolute;
+        top: 580px;
+        right: 34px;
+    }
+
+    .header-stars {
+        display: none;
+    }
+
+    .header-star1 {
+        left: 37px;
+        top: 97px;
+    }
+
+    .header-star2 {
+        left: 91px;
+        top: 64px;
+    }
+
+    .header-star3 {
+        display: none;
+    }
+
+    .header-star4 {
+        display: none;
+    }
+
+    .header-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-block__zag1 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .header-block__text {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .header-block__black {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    .header-block__link {
+        width: 285px;
+        gap: 10px;
+        border-radius: 60px;
+        border-width: 1px;
+        padding-top: 16px;
+        padding-right: 28px;
+        padding-bottom: 16px;
+        padding-left: 28px;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .header__strip {
+        width: 1717.402607595759;
+        height: 51.33911589746958;
+        border-width: 0.54px;
+        padding-top: 16px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+    }
+
+    .information {
+        display: none;
+    }
+
+    .games {
+        padding-top: 48px;
+    }
+
+    .games__zagolovok2 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        padding-bottom: 48px;
+    }
+
+    .games-block {
+        align-items: center;
+        gap: 24px;
+    }
+
+    .games-block__play {
+        flex-direction: column-reverse;
+        width: 343px;
+        height: auto;
+        gap: 29px;
+    }
+
+    .games-block__inform {
+        padding-left: 29px;
+        padding-right: 29px;
+        padding-bottom: 32px;
+        padding-top: 0px;
+        max-width: 284px;
+    }
+
+    .games-block__zagolovok3 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        line-height: 1.2;
+    }
+
+    .games-block__text {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        line-height: 1.2;
+    }
+
+    .games-block__link {
+        display: block;
+        border-radius: 60px;
+        border-width: 1px;
+        padding-top: 16px;
+        padding-right: 28px;
+        padding-bottom: 16px;
+        padding-left: 28px;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 142%;
+        text-align: center;
+    }
+
+    .games-block__play2 {
+        flex-direction: column-reverse;
+        width: 343px;
+        height: auto;
+        gap: 29px;
+    }
+
+    .games__star1 {
+        display: none;
+    }
+
+    .games__star2 {
+        display: none;
+    }
+
+    .games__star3 {
+        display: none;
+    }
+
+    .games__star4 {
+        display: none;
+    }
+
+    .otstup {
+        margin-bottom: 10px;
+    }
 }
