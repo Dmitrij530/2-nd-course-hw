@@ -598,4 +598,12 @@ body {
     .otstup {
         margin-bottom: 10px;
     }
+
+    .niz-footer__text {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+    }
 }
