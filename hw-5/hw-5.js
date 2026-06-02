@@ -55,7 +55,6 @@ askAge();
 
 //задание №5
 function multiplyNumbers(f, g) {
-    // Преобразуем оба параметра в числа
     const num1 = Number(f);
     const num2 = Number(g);
     if (isNaN(num1) || isNaN(num2)) {
@@ -69,28 +68,29 @@ console.log(multiplyNumbers('3', '4'));
 console.log(multiplyNumbers(5, 'привет')); 
 
 //задание №6 
-function calculateCube() {
-    const userInput = prompt('Введите число:');
-    const number = Number(userInput);
-    if (isNaN(number) || !Number.isFinite(number)) {
-        return 'Переданный параметр не является числом';
-    }
-    const cube = Math.pow(number, 3);
-    return `${number} в кубе равняется ${cube}`;
+function cubeNumber() {
+  const input = prompt('Введите число:');
+ 
+  if (isNaN(input) || input === '' || input === null) {
+    return 'Переданный параметр не является числом';
+  }
+  const number = Number(input);
+  const cube = number ** 3;
+  return `${number} в кубе равняется ${cube}`;
 }
+ 
 console.log('Проверка функции с числами от 0 до 10:');
-for (let n = 0; n <= 10; n++) {
-    const result = calculateCubeWithParam(n);
-    console.log(result);
+for (let i = 0; i <= 10; i++) {
+  console.log(cubeNumberWithParam(i));
 }
-
-function calculateCubeWithParam(input) {
-    const number = Number(input);
-    if (isNaN(number) || !Number.isFinite(number)) {
-        return 'Переданный параметр не является числом';
-    }
-    const cube = Math.pow(number, 3);
-    return `${number} в кубе равняется ${cube}`;
+ 
+function cubeNumberWithParam(input) {
+  if (isNaN(input) || input === '' || input === null) {
+    return 'Переданный параметр не является числом';
+  }
+  const number = Number(input);
+  const cube = number ** 3;
+  return `${number} в кубе равняется ${cube}`;
 }
 
 //задание №7
