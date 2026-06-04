@@ -69,28 +69,43 @@ console.log(multiplyNumbers(5, 'привет'));
 
 //задание №6 
 function cubeNumber() {
-  const input = prompt('Введите число:');
- 
-  if (isNaN(input) || input === '' || input === null) {
-    return 'Переданный параметр не является числом';
-  }
-  const number = Number(input);
-  const cube = number ** 3;
-  return `${number} в кубе равняется ${cube}`;
+    const input = prompt('Введите число:');
+
+    if (isNaN(input) || input === '' || input === null) {
+        const errorMessage = 'Переданный параметр не является числом';
+        console.log(errorMessage);
+        return errorMessage;
+    }
+
+    const number = Number(input);
+    const cube = number ** 3;
+
+    const resultMessage = `n в кубе равняется ${cube}`;
+    console.log(resultMessage);
+    return resultMessage;
 }
- 
-console.log('Проверка функции с числами от 0 до 10:');
+
+function testCubeNumber(num) {
+    if (isNaN(num) || num === '' || num === null) {
+        const errorMessage = 'Переданный параметр не является числом';
+        console.log(errorMessage);
+        return errorMessage;
+    }
+    const number = Number(num);
+    const cube = number ** 3;
+    const resultMessage = `n в кубе равняется ${cube}`;
+    console.log(resultMessage);
+    return resultMessage;
+}
+
+console.log('=== ВЫЗОВ ФУНКЦИИ С ВВОДОМ ОТ ПОЛЬЗОВАТЕЛЯ ===');
+const userResult = cubeNumber();
+console.log('Результат интерактивного вызова:', userResult);
+console.log('\n=== ПРОВЕРКА ФУНКЦИИ ЧИСЛАМИ ОТ 0 ДО 10 ===');
 for (let i = 0; i <= 10; i++) {
-  console.log(cubeNumberWithParam(i));
-}
- 
-function cubeNumberWithParam(input) {
-  if (isNaN(input) || input === '' || input === null) {
-    return 'Переданный параметр не является числом';
-  }
-  const number = Number(input);
-  const cube = number ** 3;
-  return `${number} в кубе равняется ${cube}`;
+    console.log(`Проверка для числа ${i}:`);
+    const testResult = testCubeNumber(i);
+    console.log('Результат тестового вызова:', testResult);
 }
 
 //задание №7
