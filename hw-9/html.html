@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>7 заданий по DOM и JS</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    section { margin-bottom: 30px; border: 1px solid #ccc; padding: 15px; border-radius: 6px; }
+    h2 { margin-top: 0; }
+    button { cursor: pointer; padding: 8px 12px; background: #007bff; color: white; border: none; border-radius: 4px; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+
+  <!-- Задание 1. Скрытие и показ текста -->
+  <section>
+    <h2>Задание 1. Скрытие и показ заголовка</h2>
+    <h1 id="heading-1">Заголовок, который можно скрыть</h1>
+    <button id="toggleBtn-1">Скрыть</button>
+  </section>
+
+  <!-- Задание 2. Изменение стиля элемента (цвет текста) -->
+  <section>
+    <h2>Задание 2. Изменение цвета текста</h2>
+    <p id="textP-2">Этот текст станет синим</p>
+    <button id="colorBtn-2">Изменить цвет</button>
+  </section>
+
+  <!-- Задание 3. Динамическое изменение текста -->
+  <section>
+    <h2>Задание 3. Изменение текста заголовка</h2>
+    <h1 id="dynamicHeading-3">Исходный заголовок</h1>
+    <button id="changeTextBtn-3">Изменить текст</button>
+  </section>
+
+  <!-- Задание 4. Поиск и изменение элементов по классу -->
+  <section>
+    <h2>Задание 4. Изменение всех элементов с классом description</h2>
+    <div class="description">Описание 1</div>
+    <div class="description">Описание 2</div>
+    <div class="description">Описание 3</div>
+    <button id="changeAllDescBtn-4">Изменить все description</button>
+  </section>
+
+  <!-- Задание 5. Работа с querySelectorAll (только p с классом description) -->
+  <section>
+    <h2>Задание 5. Изменение только p.description</h2>
+    <p class="description">Абзац с классом description (будет изменён)</p>
+    <p>Абзац без класса (останется как есть)</p>
+    <p class="description">Ещё один с классом description</p>
+    <button id="changePDescBtn-5">Изменить p.description</button>
+  </section>
+
+  <!-- Задание 6. Добавление нового элемента в DOM -->
+  <section>
+    <h2>Задание 6. Добавить новый элемент</h2>
+    <button id="addBtn-6">Добавить элемент</button>
+    <!-- Новые абзацы будут добавляться сюда (в конец body) -->
+  </section>
+
+  <!-- Задание 7. Удаление элемента -->
+  <section>
+    <h2>Задание 7. Удалить первый элемент с классом description</h2>
+    <p class="description">Первый элемент с классом description (удалится)</p>
+    <p class="description">Второй элемент с классом description (останется)</p>
+    <p>Обычный абзац</p>
+    <button id="removeBtn-7">Удалить элемент</button>
+  </section>
+
+  <script>
+    // Задание 1
+    const heading1 = document.querySelector('#heading-1');
+    const toggleBtn1 = document.querySelector('#toggleBtn-1');
+    let isVisible1 = true;
+
+    toggleBtn1.addEventListener('click', () => {
+      if (isVisible1) {
+        heading1.style.display = 'none';
+        toggleBtn1.textContent = 'Показать';
+      } else {
+        heading1.style.display = 'block';
+        toggleBtn1.textContent = 'Скрыть';
+      }
+      isVisible1 = !isVisible1;
+    });
+
+    // Задание 2
+    const p2 = document.querySelector('#textP-2');
+    const colorBtn2 = document.querySelector('#colorBtn-2');
+
+    colorBtn2.addEventListener('click', () => {
+      p2.style.color = 'blue';
+    });
+
+    // Задание 3
+    const h3 = document.querySelector('#dynamicHeading-3');
+    const changeTextBtn3 = document.querySelector('#changeTextBtn-3');
+
+    changeTextBtn3.addEventListener('click', () => {
+      h3.textContent = 'Привет, мир!';
+    });
+
+    // Задание 4
+    const changeAllDescBtn4 = document.querySelector('#changeAllDescBtn-4');
+
+    changeAllDescBtn4.addEventListener('click', () => {
+      const elements = document.querySelectorAll('.description');
+      elements.forEach(el => {
+        el.textContent = 'Измененный текст';
+      });
+    });
+
+    // Задание 5
+    const changePDescBtn5 = document.querySelector('#changePDescBtn-5');
+
+    changePDescBtn5.addEventListener('click', () => {
+      const descriptions = document.querySelectorAll('p.description');
+      descriptions.forEach(el => {
+        el.textContent = 'Новый текст';
+      });
+    });
+
+    // Задание 6
+    const addBtn6 = document.querySelector('#addBtn-6');
+
+    addBtn6.addEventListener('click', () => {
+      const newP = document.createElement('p');
+      newP.textContent = 'Новый абзац';
+      document.body.appendChild(newP);
+    });
+
+    // Задание 7
+    const removeBtn7 = document.querySelector('#removeBtn-7');
+
+    removeBtn7.addEventListener('click', () => {
+      const firstDesc = document.querySelector('.description');
+      if (firstDesc) {
+        firstDesc.remove();
+      }
+    });
+  </script>
+</body>
+</html>
