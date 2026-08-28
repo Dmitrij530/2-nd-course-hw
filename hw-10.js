@@ -156,34 +156,51 @@ function playGamesFo() {
 
 //игра №5
 function playGamesFive() {
-const options = ["камень", "ножницы", "бумага"];
+    const options = ["камень", "ножницы", "бумага"];
 
-let userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
+    let userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
 
-if (!options.includes(userChoice)) {
-  alert("Неверный ввод! Пожалуйста, выберите: камень, ножницы или бумага.");
-} else {
-  const computerIndex = Math.floor(Math.random() * options.length);
-  const computerChoice = options[computerIndex];
+    if (!options.includes(userChoice)) {
+        alert("Неверный ввод! Пожалуйста, выберите: камень, ножницы или бумага.");
+    } else {
+        const computerIndex = Math.floor(Math.random() * options.length);
+        const computerChoice = options[computerIndex];
 
-  let result;
+        let result;
 
-  if (userChoice === computerChoice) {
-    result = "Ничья!";
-  } else if (
-    (userChoice === "камень" && computerChoice === "ножницы") ||
-    (userChoice === "ножницы" && computerChoice === "бумага") ||
-    (userChoice === "бумага" && computerChoice === "камень")
-  ) {
-    result = "Вы победили!";
-  } else {
-    result = "Компьютер победил!";
-  }
+        if (userChoice === computerChoice) {
+            result = "Ничья!";
+        } else if (
+            (userChoice === "камень" && computerChoice === "ножницы") ||
+            (userChoice === "ножницы" && computerChoice === "бумага") ||
+            (userChoice === "бумага" && computerChoice === "камень")
+        ) {
+            result = "Вы победили!";
+        } else {
+            result = "Компьютер победил!";
+        }
 
-  console.log(`Ваш выбор: ${userChoice}`);
-  console.log(`Выбор компьютера: ${computerChoice}`);
-  console.log(result);
+        console.log(`Ваш выбор: ${userChoice}`);
+        console.log(`Выбор компьютера: ${computerChoice}`);
+        console.log(result);
 
-  alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n${result}`);
+        alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n${result}`);
+    }
 }
+
+//игра №6
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
 }
+
+function changeBackgroundColor() {
+    const randomColor = getRandomColor();
+    const section = document.getElementById('colorSection');
+    section.style.backgroundColor = randomColor;
+}
+
+const button = document.getElementById('colorButton');
+button.addEventListener('click', changeBackgroundColor);
